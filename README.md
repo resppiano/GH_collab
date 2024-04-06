@@ -1,9 +1,8 @@
 # CODE BY GREG JONES
 
-
 # Cancellation Rotation List
 
-The Cancellation Rotation List is a Python program designed to manage the rotation of therapists for cancellations. It includes functionality to update the list of therapists based on who is working on a given night, handle sick calls, requested cancellations, and import the current night's list of therapists from a JPEG image of an Excel-formatted schedule using Optical Character Recognition (OCR).
+This Python program is designed to manage the rotation of therapists for cancellations. It includes functionality to update the list of therapists based on who is working on a given night, handle sick calls, requested cancellations, and import the current night's list of therapists from a JPEG image of a schedule using Optical Character Recognition (OCR).
 
 ## Features
 
@@ -30,42 +29,15 @@ After installing Tesseract-OCR, you may need to configure the path to the Tesser
 
 ```python
 pytesseract.pytesseract.tesseract_cmd = r'C:\path\to\tesseract.exe'
-```
 
-Replace `C:\path\to\tesseract.exe` with the actual path to your Tesseract installation.
+# Python code goes here
 
-## Usage
 
-To use the Cancellation Rotation List program, simply run the script in your terminal or command prompt. If the program requires the list of therapists working on the current night, you will be prompted to provide the path to the JPEG image of the schedule.
+To import this Markdown document to GitHub, follow these steps:
 
-The program will then perform OCR on the image to extract the list of working therapists and proceed with the cancellation rotation logic based on the extracted list and any special cases (e.g., sick calls or requested cancellations).
+1. Create a new repository or navigate to an existing one on GitHub.
+2. Click on the 'Add file' button and select 'Create new file'.
+3. Name the file "Cancellation Rotation List.md".
+4. Copy and paste the Markdown content into the editor.
+5. Scroll down, add a commit message, and commit the new file to the repository.
 
-## Functions
-
-### `get_current_date()`
-
-Returns the current date in a readable format (`YYYY-MM-DD`).
-
-### `find_next_to_cancel(working_therapists, therapists)`
-
-Finds the next therapist to cancel who is actually working.
-
-### `adjust_for_sick_call(sick_therapist, therapists)`
-
-Adjusts the cancellation list to account for a therapist calling out sick.
-
-### `update_cancellation_list(working_therapists, therapists, sick_therapist=None, requested_cancellation=None)`
-
-Updates the cancellation list based on who is working, handles sick calls, and requested cancellations.
-
-### `extract_text_from_image(image_path)`
-
-Extracts text from an image file using OCR. This function is used to import the list of therapists working on the current night from a JPEG image of a schedule.
-
-## Contributing
-
-Contributions to the Cancellation Rotation List program are welcome. Please feel free to fork the repository, make changes, and submit pull requests.
-
-## License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
